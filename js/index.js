@@ -47,6 +47,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navigation = document.querySelectorAll('nav a');
 navigation.forEach((link, index) => {
    link.textContent = siteContent.nav[`nav-item-${index + 1}`];
+   link.style.color = 'green';
 });
 
 let homeNav = document.createElement('a');
@@ -73,7 +74,7 @@ hOne.textContent = siteContent.cta.h1;
 
 let button = document.getElementsByTagName("button");
 button.textContent = siteContent.cta.button;
-cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g,"</br>");
+// cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g,"</br>");
 
 ///need to get button text
 
