@@ -53,10 +53,12 @@ navigation.forEach((link, index) => {
 let homeNav = document.createElement('a');
 homeNav.href = '#';
 homeNav.textContent = 'Home';
+homeNav.style.color = 'green';
 
 let blog = document.createElement('a');
 blog.href = '#';
 blog.textContent = 'Blog';
+blog.style.color = 'green';
 
 const nav = document.querySelector ('nav');
 nav.prepend(homeNav);
@@ -72,8 +74,8 @@ ctaImag.setAttribute('src', siteContent.cta["img-src"]);
 let hOne = document.querySelector('h1');
 hOne.textContent = siteContent.cta.h1;
 
-let button = document.getElementsByTagName("button");
-button.textContent = siteContent.cta.button;
+let button = document.querySelector("button");
+button.textContent = 'Get Started';
 // cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g,"</br>");
 
 ///need to get button text
