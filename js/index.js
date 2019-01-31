@@ -78,7 +78,7 @@ let button = document.querySelector("button");
 button.textContent = 'Get Started';
 // cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g,"</br>");
 
-///need to get button text
+
 
 
 
