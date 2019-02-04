@@ -39,4 +39,89 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+///nav
+
+let navigation = document.querySelectorAll('nav a');
+navigation.forEach((link, index) => {
+   link.textContent = siteContent.nav[`nav-item-${index + 1}`];
+   link.style.color = 'green';
+});
+
+let homeNav = document.createElement('a');
+homeNav.href = '#';
+homeNav.textContent = 'Home';
+homeNav.style.color = 'green';
+
+let blog = document.createElement('a');
+blog.href = '#';
+blog.textContent = 'Blog';
+blog.style.color = 'green';
+
+const nav = document.querySelector ('nav');
+nav.prepend(homeNav);
+
+const navBlog = document.querySelector ('nav');
+navBlog.appendChild(blog);
+
+///cta
+
+let ctaImag = document.getElementById("cta-img");
+ctaImag.setAttribute('src', siteContent.cta["img-src"]);
+
+let hOne = document.querySelector('h1');
+hOne.textContent = siteContent.cta.h1;
+
+let button = document.querySelector("button");
+button.textContent = 'Get Started';
+// cta.innerHTML = siteContent['cta']['h1'].replace(/\s/g,"</br>");
+
+//main-content
+//headers h4
+let header = document.querySelectorAll('h4');
+// header.style.color = 'blue';
+
+const headerColor = document.querySelectorAll('.main-content h4');
+for (let i = 0; i < headerColor.length; i++){
+const headerColors= headerColor[i];
+headerColors.style.color = "blue";
+headerColors.style.background = "yellow";
+headerColors.style.width="20%"
+}
+
+header[0].textContent = siteContent["main-content"]['features-h4'];
+header[1].textContent = siteContent["main-content"]['about-h4'];
+header[2].textContent = siteContent["main-content"]['services-h4'];
+header[3].textContent = siteContent["main-content"]['product-h4'];
+header[4].textContent = siteContent["main-content"]['vision-h4'];
+
+//content p
+let content = document.querySelectorAll('p');
+content[0].textContent = siteContent["main-content"]['features-content'];
+content[1].textContent = siteContent["main-content"]['about-content'];
+content[2].textContent = siteContent["main-content"]['services-content'];
+content[3].textContent = siteContent["main-content"]['product-content'];
+content[4].textContent = siteContent["main-content"]['vision-content'];
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact
+//headers h4
+
+header[5].textContent = siteContent.contact['contact-h4'];
+
+//content p
+
+content[5].textContent = siteContent.contact.address;
+content[6].textContent = siteContent.contact.phone;
+content[7].textContent = siteContent.contact.email;
+
+let addressOne = document.querySelector('.contact p')
+addressOne.style.width="25%"
+
+//footer
+
+content[8].textContent = siteContent.footer.copyright; 
